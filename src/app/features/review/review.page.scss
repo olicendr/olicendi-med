@@ -1,0 +1,117 @@
+.review-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 18px;
+}
+
+.review-main {
+  min-width: 0;
+}
+
+.eyebrow {
+  color: #1f8a70;
+  font-weight: 800;
+}
+
+.review-card,
+.empty-state,
+.queue {
+  border: 1px solid #dde6e3;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.review-card,
+.empty-state {
+  display: grid;
+  gap: 22px;
+  margin-top: 10px;
+  padding: clamp(20px, 4vw, 34px);
+}
+
+.review-card header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.review-card header span {
+  border-radius: 999px;
+  padding: 7px 11px;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.review-card header small,
+.answer small,
+.empty-state p,
+.queue span {
+  color: #637175;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.answer {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 8px;
+  background: #f2f6f4;
+}
+
+.show-answer,
+.grade-grid button {
+  border: 0;
+  border-radius: 8px;
+  padding: 13px 14px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.show-answer {
+  width: fit-content;
+  background: #102326;
+  color: #ffffff;
+}
+
+.grade-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.grade-grid button {
+  background: #e8efec;
+  color: #102326;
+}
+
+.queue {
+  height: fit-content;
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+}
+
+.queue strong {
+  font-size: 3rem;
+}
+
+@media (max-width: 860px) {
+  .review-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
