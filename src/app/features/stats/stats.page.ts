@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { StudyService } from '../../core/study/study.service';
 
 @Component({
@@ -39,6 +39,7 @@ import { StudyService } from '../../core/study/study.service';
       }
     </section>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './stats.page.scss'
 })
 export class StatsPage {

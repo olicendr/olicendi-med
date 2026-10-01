@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ReviewGrade, ReviewItem } from '../../core/models';
 import { StudyService } from '../../core/study/study.service';
 
@@ -48,6 +48,7 @@ import { StudyService } from '../../core/study/study.service';
       </aside>
     </section>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './review.page.scss'
 })
 export class ReviewPage {

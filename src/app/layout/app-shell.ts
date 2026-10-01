@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { AuthService } from '../core/auth/auth.service';
 import { StudyService } from '../core/study/study.service';
@@ -44,6 +44,7 @@ import { StudyService } from '../core/study/study.service';
       </main>
     </div>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './app-shell.scss'
 })
 export class AppShell {

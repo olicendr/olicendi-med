@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { forkJoin, switchMap } from 'rxjs';
 import { BiochemModule, StudyCard } from '../../core/models';
@@ -27,6 +27,7 @@ import { StudyService } from '../../core/study/study.service';
       </section>
     }
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './module-detail.page.scss'
 })
 export class ModuleDetailPage {

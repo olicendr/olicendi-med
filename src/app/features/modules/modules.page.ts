@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { StudyService } from '../../core/study/study.service';
 
@@ -24,6 +24,7 @@ import { StudyService } from '../../core/study/study.service';
       }
     </section>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './modules.page.scss'
 })
 export class ModulesPage {
